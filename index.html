@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snakey's Coming To Get You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-shell">
+        <section class="game-panel">
+            <div class="hud hud-left">
+                <h1>Snakey's Coming To Get You</h1>
+                <p>Use the arrow keys to keep moving. If the snake reaches you, it's over.</p>
+            </div>
+            <div class="hud hud-right" aria-live="polite">
+                <span class="score-label">Score</span>
+                <span id="scoreValue" class="score-value">0</span>
+            </div>
+            <canvas id="gameCanvas" width="960" height="600" aria-label="Snake chase game"></canvas>
+            <div id="gameOverOverlay" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="gameOverTitle">
+                <div class="overlay-card">
+                    <p class="overlay-kicker">Game Over</p>
+                    <h2 id="gameOverTitle">The snake caught you</h2>
+                    <p id="finalScoreText">Final score: 0</p>
+                    <button id="restartButton" type="button">Restart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
